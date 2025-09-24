@@ -3,44 +3,47 @@ using UnityEngine;
 public class MovementCar : MonoBehaviour
 {
     [SerializeField] private float acceleration = 10f;
-    [SerializeField] private float deceleration = 8f;
-    [SerializeField] private float maxSpeed = 15f;       
-    [SerializeField] private float laneSpeed = 8f;
-    [SerializeField] private float laneDistance = 3f; 
+    [SerializeField] private float deceleration = 5f;
+    [SerializeField] private float reverseAcceleration = 6f; 
+    [SerializeField] private float maxSpeed = 20f; 
+    [SerializeField] private float maxReverseSpeed = 8f; 
+    [SerializeField] private float turnSpeed = 50f;    
 
+    private Rigidbody rb;
     private float currentSpeed = 0f;
-    private int targetLane = 0; 
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
 
     void Update()
     {
-
         if (Input.GetKey(KeyCode.W))
         {
             currentSpeed += acceleration * Time.deltaTime;
         }
+        else if (Input.GetKey(KeyCode.S))
+        {
+            currentSpeed -= reverseAcceleration * Time.deltaTime;
+        }
         else
         {
-            currentSpeed -= deceleration * Time.deltaTime;
+            if (currentSpeed > 0)
+                currentSpeed -= deceleration * Time.deltaTime;
+            else if (currentSpeed < 0)
+                currentSpeed += deceleration * Time.deltaTime;
         }
-        currentSpeed = Mathf.Clamp(currentSpeed, 0, maxSpeed);
+        currentSpeed = Mathf.Clamp(currentSpeed, -maxReverseSpeed, maxSpeed);
 
+        Vector3 forwardMove = transform.forward * currentSpeed;
+        rb.linearVelocity = new Vector3(forwardMove.x, rb.linearVelocity.y, forwardMove.z);
 
-        transform.Translate(Vector3.forward * currentSpeed * Time.deltaTime);
-
-    
-        if (Input.GetKeyDown(KeyCode.A))
+        float turnInput = Input.GetAxis("Horizontal");
+        if (Mathf.Abs(currentSpeed) > 0.1f)
         {
-            targetLane = Mathf.Max(-1, targetLane - 1);
+            transform.Rotate(Vector3.up, turnInput * turnSpeed * Time.deltaTime);
         }
-        else if (Input.GetKeyDown(KeyCode.D))
-        {
-            targetLane = Mathf.Min(1, targetLane + 1);
-        }
-
-
-        float targetX = targetLane * laneDistance;
-        Vector3 newPos = transform.position;
-        newPos.x = Mathf.Lerp(transform.position.x, targetX, Time.deltaTime * laneSpeed);
-        transform.position = newPos;
     }
 }
+

@@ -1160,6 +1160,14 @@ PrefabInstance:
       value: Car
       objectReference: {fileID: 0}
     - target: {fileID: 3371987881652481083, guid: b5b6ff8d3265e144f870f40829bd27e7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3212175
+      objectReference: {fileID: 0}
+    - target: {fileID: 3371987881652481083, guid: b5b6ff8d3265e144f870f40829bd27e7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.1349907
+      objectReference: {fileID: 0}
+    - target: {fileID: 3371987881652481083, guid: b5b6ff8d3265e144f870f40829bd27e7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -1198,6 +1206,18 @@ PrefabInstance:
     - target: {fileID: 3371987881652481083, guid: b5b6ff8d3265e144f870f40829bd27e7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9016985170761840890, guid: b5b6ff8d3265e144f870f40829bd27e7, type: 3}
+      propertyPath: maxSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 9016985170761840890, guid: b5b6ff8d3265e144f870f40829bd27e7, type: 3}
+      propertyPath: maxReverseSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 9016985170761840890, guid: b5b6ff8d3265e144f870f40829bd27e7, type: 3}
+      propertyPath: reverseAcceleration
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
