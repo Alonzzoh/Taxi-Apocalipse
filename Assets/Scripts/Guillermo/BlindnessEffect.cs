@@ -30,9 +30,9 @@ public class BlindnessEffect : MonoBehaviour
     private IEnumerator BlindRoutine()
     {
         isBlinded = true;
-        blindImage.gameObject.SetActive(true); // activa la imagen negra
+        blindImage.gameObject.SetActive(true); 
         yield return new WaitForSeconds(blindDuration);
-        blindImage.gameObject.SetActive(false); // quita la imagen
+        blindImage.gameObject.SetActive(false); 
         isBlinded = false;
     }
 }
