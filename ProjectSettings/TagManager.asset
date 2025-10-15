@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Drop
   - Break
+  - Zombie
   layers:
   - Default
   - TransparentFX

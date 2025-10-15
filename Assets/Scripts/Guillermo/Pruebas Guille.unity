@@ -258,7 +258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 0.9254902}
+  m_Color: {r: 1, g: 0, b: 0, a: 0.7254902}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -330,7 +330,7 @@ Transform:
   m_GameObject: {fileID: 165014815}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.03, y: 0.3169999, z: 0.3}
+  m_LocalPosition: {x: -0.038, y: 0.3169999, z: 0.3}
   m_LocalScale: {x: 0.64991, y: 0.26704, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -745,9 +745,11 @@ GameObject:
   - component: {fileID: 624445501}
   - component: {fileID: 624445503}
   - component: {fileID: 624445504}
+  - component: {fileID: 624445505}
+  - component: {fileID: 624445506}
   m_Layer: 0
   m_Name: Zombie
-  m_TagString: Untagged
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -837,7 +839,7 @@ Transform:
   m_GameObject: {fileID: 624445494}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4, y: 1, z: 9}
+  m_LocalPosition: {x: 4, y: 1, z: 14.79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -926,6 +928,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46e3a1f9cd758294f9fc90ee982318a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &624445505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624445494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34d784aeb0c011447841a753ef274e6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 624445502}
+  speedChase: 2
+  chase: 0
+  range: 6
+  distance: 5
+  player: {fileID: 1667973763}
+--- !u!114 &624445506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624445494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0d0b6a0830eba848b3ccab4f33999d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreValue: 1
 --- !u!1 &833503467
 GameObject:
   m_ObjectHideFlags: 0
@@ -1963,7 +1996,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blindImage: {fileID: 164153375}
-  blindDuration: 3
+  fadeInTime: 0.5
+  blindTime: 3
+  fadeOutTime: 0.5
 --- !u!1 &1914180103
 GameObject:
   m_ObjectHideFlags: 0

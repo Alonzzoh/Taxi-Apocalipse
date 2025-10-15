@@ -60,6 +60,12 @@ public class MovementCar : MonoBehaviour
             Destroy(collision.gameObject);
             Debug.Log("Objeto destruido con dash!");
         }
+
+        if (collision.gameObject.CompareTag("Zombie"))
+        {
+            Destroy(collision.gameObject);
+            Debug.Log("Zombie destruido!");
+        }
     }
 }
 
