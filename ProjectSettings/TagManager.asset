@@ -7,6 +7,7 @@ TagManager:
   - Drop
   - Break
   - Zombie
+  - ExtraTime
   layers:
   - Default
   - TransparentFX
