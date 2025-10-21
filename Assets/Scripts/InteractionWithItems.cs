@@ -15,9 +15,7 @@ public class InteractionWithItems : MonoBehaviour
     {
         if (other.CompareTag("ExtraTime"))
         {
-
-            Destroy(other.gameObject);
-            chronometer.time += 60;
+            chronometer.time += 30;
         }
     }
 }
