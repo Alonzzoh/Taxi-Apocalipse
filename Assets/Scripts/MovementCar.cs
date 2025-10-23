@@ -11,6 +11,7 @@ public class MovementCar : MonoBehaviour
 
     private Rigidbody rb;
     private float currentSpeed = 0f;
+    public bool isDashing = false;
 
     void Start()
     {
@@ -43,6 +44,27 @@ public class MovementCar : MonoBehaviour
         if (Mathf.Abs(currentSpeed) > 0.1f)
         {
             transform.Rotate(Vector3.up, turnInput * turnSpeed * Time.deltaTime);
+        }
+    }
+
+    public void setMoveSpeed(float newSpeedAdjustment)
+    {
+        acceleration += newSpeedAdjustment;
+        maxSpeed += newSpeedAdjustment;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (isDashing && collision.gameObject.CompareTag("Break"))
+        {
+            Destroy(collision.gameObject);
+            Debug.Log("Objeto destruido con dash!");
+        }
+
+        if (collision.gameObject.CompareTag("Zombie"))
+        {
+            Destroy(collision.gameObject);
+            Debug.Log("Zombie destruido!");
         }
     }
 }
