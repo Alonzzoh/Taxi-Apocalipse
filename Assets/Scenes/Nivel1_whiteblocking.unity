@@ -8068,18 +8068,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2100873594765760274, guid: bfd607ebbff74094d9e64b049beb2a81, type: 3}
       insertIndex: -1
       addedObject: {fileID: 652300540}
-    - targetCorrespondingSourceObject: {fileID: 8127848134595091569, guid: bfd607ebbff74094d9e64b049beb2a81, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 652300534}
   m_SourcePrefab: {fileID: 100100000, guid: bfd607ebbff74094d9e64b049beb2a81, type: 3}
 --- !u!1 &652300531 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2100873594765760274, guid: bfd607ebbff74094d9e64b049beb2a81, type: 3}
-  m_PrefabInstance: {fileID: 652300530}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &652300532 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8127848134595091569, guid: bfd607ebbff74094d9e64b049beb2a81, type: 3}
   m_PrefabInstance: {fileID: 652300530}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &652300533
@@ -8101,20 +8093,6 @@ MonoBehaviour:
   maxReverseSpeed: 15
   turnSpeed: 50
   isDashing: 0
---- !u!114 &652300534
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 652300532}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfbdb203393451d459f8eb28d9dcff1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  passenger: {fileID: 1415193123}
-  dropOffPoint: {fileID: 234806031}
 --- !u!4 &652300535 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1615699127603203496, guid: bfd607ebbff74094d9e64b049beb2a81, type: 3}
