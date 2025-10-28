@@ -8,6 +8,7 @@ TagManager:
   - Break
   - Zombie
   - ExtraTime
+  - Bomb
   layers:
   - Default
   - TransparentFX

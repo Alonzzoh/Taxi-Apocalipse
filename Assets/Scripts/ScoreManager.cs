@@ -20,6 +20,6 @@ public class ScoreManager : MonoBehaviour
     private void UpdateScoreUI()
     {
         if (scoreText != null)
-            scoreText.text = "Puntos: " + score;
+            scoreText.text = " " + score;
     }
 }
