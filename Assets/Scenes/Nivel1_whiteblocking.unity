@@ -8167,6 +8167,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2065627591057317305, guid: bfd607ebbff74094d9e64b049beb2a81, type: 3}
+      propertyPath: passenger
+      value: 
+      objectReference: {fileID: 1415193123}
+    - target: {fileID: 2065627591057317305, guid: bfd607ebbff74094d9e64b049beb2a81, type: 3}
+      propertyPath: dropOffPoint
+      value: 
+      objectReference: {fileID: 295507012}
     - target: {fileID: 2100873594765760274, guid: bfd607ebbff74094d9e64b049beb2a81, type: 3}
       propertyPath: m_Name
       value: Taxi_Placeholder
