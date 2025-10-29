@@ -5,6 +5,7 @@ public class ScoreManager : MonoBehaviour
 {
     public TMP_Text scoreText;
     private int score = 0;
+    public int scoreMultiplayer = 1;
 
     void Start()
     {
@@ -13,7 +14,7 @@ public class ScoreManager : MonoBehaviour
 
     public void AddScore(int amount)
     {
-        score += amount;
+        score += amount * scoreMultiplayer;
         UpdateScoreUI();
     }
 

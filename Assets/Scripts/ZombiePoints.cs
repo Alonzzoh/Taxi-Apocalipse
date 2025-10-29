@@ -16,5 +16,7 @@ public class ZombiePoints : MonoBehaviour
 
             Destroy(gameObject);
         }
+
+        
     }
 }
