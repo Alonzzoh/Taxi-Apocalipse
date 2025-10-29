@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ZombiePoints : MonoBehaviour
 {
-    public int scoreValue = 1;
+    public static int scoreValue = 1;
 
     private void OnTriggerEnter(Collider other)
     {

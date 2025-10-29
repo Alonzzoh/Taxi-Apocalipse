@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -5,7 +6,7 @@ public class ScoreManager : MonoBehaviour
 {
     public TMP_Text scoreText;
     private int score = 0;
-    public int scoreMultiplayer = 1;
+    public bool isDoubleScoreActive = false;
 
     void Start()
     {
@@ -14,7 +15,7 @@ public class ScoreManager : MonoBehaviour
 
     public void AddScore(int amount)
     {
-        score += amount * scoreMultiplayer;
+        score += amount;
         UpdateScoreUI();
     }
 
@@ -22,5 +23,36 @@ public class ScoreManager : MonoBehaviour
     {
         if (scoreText != null)
             scoreText.text = " " + score;
+    }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Score2x"))
+        {
+            
+            isDoubleScoreActive = true;
+            ScoreItem1();
+
+            StartCoroutine(ResetScoreMultiplierAfterDelay());
+        }
+    }
+
+    IEnumerator ResetScoreMultiplierAfterDelay()
+    {
+        yield return new WaitForSeconds(20f);
+        isDoubleScoreActive = false;
+    }
+
+    private void ScoreItem1()
+    {
+        if (isDoubleScoreActive)
+        {
+            AddScore(2);
+        }
+        else
+        {
+            AddScore(1);
+        }
     }
 }
