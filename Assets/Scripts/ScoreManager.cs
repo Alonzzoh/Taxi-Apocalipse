@@ -1,12 +1,14 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour
 {
     public TMP_Text scoreText;
     private int score = 0;
-    public bool isDoubleScoreActive = false;
+
+    public static bool isDoubleScoreActive = false;
 
     void Start()
     {
@@ -30,10 +32,9 @@ public class ScoreManager : MonoBehaviour
     {
         if (other.CompareTag("Score2x"))
         {
-            
             isDoubleScoreActive = true;
-            ScoreItem1();
 
+            Debug.Log("Double Score Activated!");
             StartCoroutine(ResetScoreMultiplierAfterDelay());
         }
     }
@@ -42,17 +43,6 @@ public class ScoreManager : MonoBehaviour
     {
         yield return new WaitForSeconds(20f);
         isDoubleScoreActive = false;
-    }
-
-    private void ScoreItem1()
-    {
-        if (isDoubleScoreActive)
-        {
-            AddScore(2);
-        }
-        else
-        {
-            AddScore(1);
-        }
+        Debug.Log("Double Score Deactivated!");
     }
 }

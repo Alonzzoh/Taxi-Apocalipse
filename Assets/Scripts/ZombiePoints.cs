@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ZombiePoints : MonoBehaviour
 {
-    public static int scoreValue = 1;
+    public int scoreValue = 1;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -11,7 +11,15 @@ public class ZombiePoints : MonoBehaviour
             ScoreManager scoreManager = FindFirstObjectByType<ScoreManager>();
             if (scoreManager != null)
             {
-                scoreManager.AddScore(scoreValue);
+                if(ScoreManager.isDoubleScoreActive)
+                {
+                    scoreManager.AddScore(scoreValue * 2);
+                }
+                else
+                {
+                    scoreManager.AddScore(scoreValue);
+                }
+                    
             }
 
             Destroy(gameObject);

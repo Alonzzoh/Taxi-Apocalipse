@@ -8331,7 +8331,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 257796582}
-  isDoubleScoreActive: 0
 --- !u!1001 &654120778
 PrefabInstance:
   m_ObjectHideFlags: 0
