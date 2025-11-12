@@ -7,7 +7,6 @@ public class InteractionWithItems : MonoBehaviour
 
     void Awake()
     {
-
         chronometer = GameObject.Find("Canvas").GetComponent<Chronometer>();
     }
 
