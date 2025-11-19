@@ -686,7 +686,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 441640831}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 474830160}
+        m_TargetAssemblyTypeName: SceneManagerUI, Assembly-CSharp
+        m_MethodName: GoToExitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &441640831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -775,8 +787,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe41783e3569c144ab8eec58d6465f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playButton: {fileID: 1392944760}
-  quitButton: {fileID: 441640830}
+  mainMenuSceneName: MainMenuScene
+  gameplaySceneName: Nivel1_whiteblocking
+  gameOverSceneName: Game Over
+  victorySceneName: Victory
 --- !u!1 &867427356
 GameObject:
   m_ObjectHideFlags: 0
@@ -983,7 +997,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1392944761}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 474830160}
+        m_TargetAssemblyTypeName: SceneManagerUI, Assembly-CSharp
+        m_MethodName: GoToStartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1392944761
 MonoBehaviour:
   m_ObjectHideFlags: 0

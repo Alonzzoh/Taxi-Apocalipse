@@ -12,8 +12,23 @@ EditorBuildSettings:
     path: Assets/Scenes/Nivel1_whiteblocking.unity
     guid: 8e599ba03a869de418b2d7d7ba6dfcc1
   - enabled: 1
+    path: Assets/Scenes/Nivel2_TEST.unity
+    guid: fbb42f5607220604cb602c4354534361
+  - enabled: 1
+    path: Assets/Scenes/Nivel3_TEST.unity
+    guid: 9fcecdad0f17d2a44b14ae70dc50583c
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Victory.unity
+    guid: 7ef47d8d0934b98429f0718657d8a266
+  - enabled: 1
+    path: Assets/Scenes/FinalVictory.unity
+    guid: ccc8838325ec1774c8d16b8b4e0623fa
+  - enabled: 1
+    path: Assets/Scenes/Game Over.unity
+    guid: 88978597d8ee3a84ca7b4ac42ba2d3f2
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
