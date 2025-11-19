@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class TaxiPassenger : MonoBehaviour
 {
@@ -9,11 +10,13 @@ public class TaxiPassenger : MonoBehaviour
     public TextMeshProUGUI actionText;
     private bool hasPassenger = false;
     private bool hasBeenDroppedOff = false;
+    private SceneManagerUI sceneManager;
 
     void Start()
     {
         if (actionText != null)
             actionText.gameObject.SetActive(false);
+        sceneManager = FindAnyObjectByType<SceneManagerUI>().GetComponent<SceneManagerUI>();
     }
 
     void OnTriggerStay(Collider other)
@@ -53,6 +56,7 @@ public class TaxiPassenger : MonoBehaviour
                 passenger.SetActive(true);
                 actionText.gameObject.SetActive(false);
                 Debug.Log("Pasajero dejado en destino");
+                sceneManager.GoToVictoryScreen();
             }
         }
     }
